@@ -1,0 +1,17 @@
+{
+  "name": "reborn.spell.spine",
+  "rootNamespace": "RebornFrame.Spell.Spine",
+  "references": [
+    "reborn.spell",
+    "reborn.protobuf"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

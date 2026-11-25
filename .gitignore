@@ -1,0 +1,47 @@
+# 操作系统
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE 与本地工程文件
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.pdb.meta
+*.mdb
+*.opendb
+*.VC.db
+*.sln
+*.csproj
+*.unityproj
+
+# Unity 生成目录
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# .NET 编译输出
+bin/
+obj/
+
+# 导出包
+*.unitypackage
+*.apk
+*.aab
+*.app

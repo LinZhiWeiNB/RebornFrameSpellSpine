@@ -1,0 +1,20 @@
+{
+  "name": "reborn.spell.spine.tests",
+  "rootNamespace": "RebornFrame.Spell.Spine.Tests",
+  "references": [
+    "reborn.spell.spine",
+    "reborn.spell",
+    "reborn.protobuf",
+    "Unity.Entities",
+    "Unity.Collections"
+  ],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": true,
+  "precompiledReferences": ["nunit.framework.dll", "Google.Protobuf.dll"],
+  "autoReferenced": false,
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "versionDefines": [],
+  "optionalUnityReferences": ["TestAssemblies"]
+}
