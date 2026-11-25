@@ -24,14 +24,14 @@ namespace RebornFrame.Spell.Spine {
     static SpineSpellTrackReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVTcGluZVNwZWxsVHJhY2sucHJvdG8iUgoVU3BpbmVTcGVsbFRyYWNrQ29u",
+            "ChVTcGluZVNwZWxsVHJhY2sucHJvdG8iZAoVU3BpbmVTcGVsbFRyYWNrQ29u",
             "ZmlnEhYKDmFuaW1hdGlvbl9uYW1lGAEgASgJEgwKBGxvb3AYAiABKAgSEwoL",
-            "dHJhY2tfaW5kZXgYAyABKAVCGqoCF1JlYm9ybkZyYW1lLlNwZWxsLlNwaW5l",
-            "YgZwcm90bzM="));
+            "dHJhY2tfaW5kZXgYAyABKAUSEAoIZGF0YV9rZXkYBCABKAlCGqoCF1JlYm9y",
+            "bkZyYW1lLlNwZWxsLlNwaW5lYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::RebornFrame.Spell.Spine.SpineSpellTrackConfig), global::RebornFrame.Spell.Spine.SpineSpellTrackConfig.Parser, new[]{ "AnimationName", "Loop", "TrackIndex" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::RebornFrame.Spell.Spine.SpineSpellTrackConfig), global::RebornFrame.Spell.Spine.SpineSpellTrackConfig.Parser, new[]{ "AnimationName", "Loop", "TrackIndex", "DataKey" }, null, null, null, null)
           }));
     }
     #endregion
@@ -39,7 +39,7 @@ namespace RebornFrame.Spell.Spine {
   }
   #region Messages
   /// <summary>
-  /// 一条 Spine 动画轨道。
+  /// 一条 Spine 动画轨道。data_key 对应预先登记的 Spine 数据字节。
   /// </summary>
   public sealed partial class SpineSpellTrackConfig : pb::IMessage<SpineSpellTrackConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -78,6 +78,7 @@ namespace RebornFrame.Spell.Spine {
       animationName_ = other.animationName_;
       loop_ = other.loop_;
       trackIndex_ = other.trackIndex_;
+      dataKey_ = other.dataKey_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -123,6 +124,18 @@ namespace RebornFrame.Spell.Spine {
       }
     }
 
+    /// <summary>Field number for the "data_key" field.</summary>
+    public const int DataKeyFieldNumber = 4;
+    private string dataKey_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataKey {
+      get { return dataKey_; }
+      set {
+        dataKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -141,6 +154,7 @@ namespace RebornFrame.Spell.Spine {
       if (AnimationName != other.AnimationName) return false;
       if (Loop != other.Loop) return false;
       if (TrackIndex != other.TrackIndex) return false;
+      if (DataKey != other.DataKey) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -151,6 +165,7 @@ namespace RebornFrame.Spell.Spine {
       if (AnimationName.Length != 0) hash ^= AnimationName.GetHashCode();
       if (Loop != false) hash ^= Loop.GetHashCode();
       if (TrackIndex != 0) hash ^= TrackIndex.GetHashCode();
+      if (DataKey.Length != 0) hash ^= DataKey.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -181,6 +196,10 @@ namespace RebornFrame.Spell.Spine {
         output.WriteRawTag(24);
         output.WriteInt32(TrackIndex);
       }
+      if (DataKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DataKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -203,6 +222,10 @@ namespace RebornFrame.Spell.Spine {
         output.WriteRawTag(24);
         output.WriteInt32(TrackIndex);
       }
+      if (DataKey.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(DataKey);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -221,6 +244,9 @@ namespace RebornFrame.Spell.Spine {
       }
       if (TrackIndex != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrackIndex);
+      }
+      if (DataKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DataKey);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -242,6 +268,9 @@ namespace RebornFrame.Spell.Spine {
       }
       if (other.TrackIndex != 0) {
         TrackIndex = other.TrackIndex;
+      }
+      if (other.DataKey.Length != 0) {
+        DataKey = other.DataKey;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -270,6 +299,10 @@ namespace RebornFrame.Spell.Spine {
             TrackIndex = input.ReadInt32();
             break;
           }
+          case 34: {
+            DataKey = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -295,6 +328,10 @@ namespace RebornFrame.Spell.Spine {
           }
           case 24: {
             TrackIndex = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            DataKey = input.ReadString();
             break;
           }
         }
