@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+option csharp_namespace = "RebornFrame.Spell.Spine";
+
+// 一条 Spine 动画轨道。
+message SpineSpellTrackConfig {
+  string animation_name = 1;
+  bool loop = 2;
+  int32 track_index = 3;
+}

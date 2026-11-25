@@ -1,0 +1,11 @@
+{
+  "name": "com.reborn.spell.spine",
+  "displayName": "技能 Spine 轨道",
+  "version": "1.0.0",
+  "unity": "6000.0",
+  "description": "通过 Spine 骨架播放技能表现轨道。游戏把 Spine 动画组件适配成 ISpineSpellSkeleton 后绑定到单位。",
+  "dependencies": {
+    "com.reborn.spell": "1.2.0",
+    "com.reborn.protobuf": "1.0.0"
+  }
+}
