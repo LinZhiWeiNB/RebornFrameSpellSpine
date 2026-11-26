@@ -1,0 +1,20 @@
+{
+  "name": "reborn.spell.spine.unity",
+  "rootNamespace": "RebornFrame.Spell.Spine",
+  "references": [
+    "reborn.spell.spine",
+    "spine-unity",
+    "spine-csharp"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "autoReferenced": true,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "defineConstraints": [
+    "REBORN_SPINE_UNITY"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false
+}
