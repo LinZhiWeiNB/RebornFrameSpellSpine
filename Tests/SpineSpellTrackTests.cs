@@ -186,7 +186,7 @@ namespace RebornFrame.Spell.Spine.Tests
         private sealed class RecordingSkeleton : ISpineSpellSkeleton
         {
             public string AnimationName;
-            public int Frame = -1;
+            public float Time = -1f;
             public bool Loop;
             public bool Playing;
             public int StopCount;
@@ -205,12 +205,12 @@ namespace RebornFrame.Spell.Spine.Tests
                 StopCount++;
             }
 
-            public void Show(string animationName, int trackIndex, bool loop, int frame, bool play)
+            public void Show(string animationName, int trackIndex, bool loop, float time, bool play)
             {
                 AnimationName = animationName;
                 TrackIndex = trackIndex;
                 Loop = loop;
-                Frame = frame;
+                Time = time;
                 Playing = play;
             }
         }

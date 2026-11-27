@@ -1,11 +1,11 @@
 {
   "name": "com.reborn.spell.spine",
   "displayName": "技能 Spine 轨道",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "unity": "6000.0",
   "description": "通过 Spine 骨架播放技能表现轨道。按 SpineLoadSettings 加载可换装骨架并创建物体。游戏自行安装 spine-unity，定义 REBORN_SPINE_UNITY 后使用内置加载方案，也可以换成自己的 ISpineSpellObjectFactory。",
   "dependencies": {
-    "com.reborn.spell": "1.3.0",
+    "com.reborn.spell": "1.4.0",
     "com.reborn.protobuf": "1.0.0"
   }
 }

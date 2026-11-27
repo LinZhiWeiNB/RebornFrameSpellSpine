@@ -20,16 +20,15 @@ namespace RebornFrame.Spell.Spine
         void Stop(int trackIndex);
 
         /// <summary>
-        ///     把动画摆到片段内第 <paramref name="frame" /> 帧。
-        ///     <paramref name="play" /> 为 false 时停在这一帧，为 true 时从这一帧继续播放。
-        ///     这一帧的时间是 <paramref name="frame" /> 乘以 <see cref="SpellPresentation.FrameDuration" />。
+        ///     把动画摆到片段内第 <paramref name="time" /> 秒。
+        ///     <paramref name="play" /> 为 false 时停在这一秒，为 true 时从这一秒继续播放。
         /// </summary>
         /// <param name="animationName">动画名。</param>
         /// <param name="trackIndex">Spine 轨道编号。</param>
         /// <param name="loop">是否循环。</param>
-        /// <param name="frame">相对片段起点的帧数。</param>
+        /// <param name="time">相对片段起点的秒数。</param>
         /// <param name="play">摆完后是否继续播放。</param>
-        void Show(string animationName, int trackIndex, bool loop, int frame, bool play);
+        void Show(string animationName, int trackIndex, bool loop, float time, bool play);
     }
 
     /// <summary>一份已经解析的 Spine 数据，可以反复创建骨架。</summary>
@@ -193,9 +192,9 @@ namespace RebornFrame.Spell.Spine
                 _skeleton.Stop(_trackIndex);
             }
 
-            public void Show(int frame, bool play)
+            public void Show(float time, bool play)
             {
-                _skeleton.Show(_animationName, _trackIndex, _loop, frame, play);
+                _skeleton.Show(_animationName, _trackIndex, _loop, time, play);
             }
         }
     }
